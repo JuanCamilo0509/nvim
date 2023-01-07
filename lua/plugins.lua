@@ -2,7 +2,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
 	--Telescope
-	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } } }
+	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } },
+		config = require 'Cplugins.telescope' }
 	use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
 	use { "terrortylor/nvim-comment" }
 	use { 'nvim-treesitter/nvim-treesitter', config = require 'Cplugins.nvim-treesitter' }
