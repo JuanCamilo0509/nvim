@@ -8,6 +8,8 @@ map('n', '<leader>t', ':q<CR>')
 map('i', '<C-s>', '<Esc>')
 map('n', 'l', 'n')
 map('n', 'L', 'N')
+	-- Formatter
+map('n', 'ff', ":lua vim.lsp.buf.format()<CR>")
 
 --Splits
 map('n', 'wn', '<C-w>k')
@@ -47,10 +49,6 @@ map('v', 'S', 'w')
 
 
 --Plugins
---Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>a', builtin.find_files, {})
 --nvim_comment
 require('nvim_comment').setup({line_mapping = "ca", operator_mapping = "co", comment_chunk_text_object = "ic"})
 --Format
-map('n', 'ff', ":lua vim.lsp.buf.format()<CR>")

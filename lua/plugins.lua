@@ -33,6 +33,4 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons'
 	-- git
 	use { 'lewis6991/gitsigns.nvim', config = require 'Cplugins.gitsigns' }
-	--Term
-	use { "akinsho/toggleterm.nvim", tag = '*', config = require 'Cplugins.toggleterm' }
 end)
