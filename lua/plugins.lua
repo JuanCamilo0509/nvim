@@ -25,11 +25,13 @@ return require('packer').startup(function(use)
 	use { 'onsails/lspkind.nvim' }
 	-- Formater
 	use { 'jose-elias-alvarez/null-ls.nvim', config = require 'Cplugins.null-ls' }
+	use 'simrat39/rust-tools.nvim'
+	--Underline
+	use {'itchyny/vim-cursorword'}
 	-- mini.nvim
 	use 'echasnovski/mini.nvim'
 	use { 'echasnovski/mini.jump2d', config = require 'Cplugins.jump2d' }
 	use { 'echasnovski/mini.indentscope', config = require 'Cplugins.indentscope' }
-	use { 'echasnovski/mini.cursorword', config = require 'Cplugins.cursorword' }
 	--Icons
 	use 'nvim-tree/nvim-web-devicons'
 	-- git

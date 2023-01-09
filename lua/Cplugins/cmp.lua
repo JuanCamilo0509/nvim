@@ -100,3 +100,7 @@ lspconfig.hls.setup {
 lspconfig.intelephense.setup {
    capabilities = capabilities
 }
+
+lspconfig.rust_analyzer.setup {
+   capabilities = capabilities
+}
