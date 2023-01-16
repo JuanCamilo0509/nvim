@@ -73,6 +73,14 @@ lspconfig.html.setup {
    capabilities = capabilities
 }
 
+lspconfig.marksman.setup {
+	capabilities = capabilities
+}
+
+lspconfig.tsserver.setup {
+	capabilities = capabilities
+}
+
 lspconfig.emmet_ls.setup {
    capabilities = capabilities
 }

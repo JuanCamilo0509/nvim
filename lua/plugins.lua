@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
 	use { 'jose-elias-alvarez/null-ls.nvim', config = require 'Cplugins.null-ls' }
 	use 'simrat39/rust-tools.nvim'
 	--Underline
-	use {'itchyny/vim-cursorword'}
+	use { 'itchyny/vim-cursorword' }
 	-- mini.nvim
 	use 'echasnovski/mini.nvim'
 	use { 'echasnovski/mini.jump2d', config = require 'Cplugins.jump2d' }
@@ -36,4 +36,13 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons'
 	-- git
 	use { 'lewis6991/gitsigns.nvim', config = require 'Cplugins.gitsigns' }
+	--Markdown Preview
+	-- install without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+
+	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+		setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
