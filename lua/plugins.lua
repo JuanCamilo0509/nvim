@@ -5,13 +5,17 @@ return require('packer').startup(function(use)
 	use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { { 'nvim-lua/plenary.nvim' } },
 		config = require 'Cplugins.telescope' }
 	use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
+	-- Comment Plugin
 	use { "terrortylor/nvim-comment" }
+	-- Treesitter
 	use { 'nvim-treesitter/nvim-treesitter', config = require 'Cplugins.nvim-treesitter' }
 	--Themes
 	use 'Mofiqul/adwaita.nvim'
 	use 'shaunsingh/nord.nvim'
+	use 'navarasu/onedark.nvim'
 	use 'folke/tokyonight.nvim'
 	use { "ellisonleao/gruvbox.nvim" }
+	use { 'NvChad/nvim-colorizer.lua'}
 	--Statusline
 	use { 'nvim-lualine/lualine.nvim', config = require 'Cplugins.lualine' }
 	--autocompletion
@@ -37,12 +41,8 @@ return require('packer').startup(function(use)
 	-- git
 	use { 'lewis6991/gitsigns.nvim', config = require 'Cplugins.gitsigns' }
 	--Markdown Preview
-	-- install without yarn or npm
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
-
-	use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
-		setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)

@@ -89,7 +89,7 @@ lspconfig.cssls.setup {
    capabilities = capabilities
 }
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
    capabilities = capabilities
 }
 
@@ -110,5 +110,9 @@ lspconfig.intelephense.setup {
 }
 
 lspconfig.rust_analyzer.setup {
+   capabilities = capabilities
+}
+
+lspconfig.zk.setup {
    capabilities = capabilities
 }

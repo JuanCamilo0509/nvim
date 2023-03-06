@@ -18,7 +18,7 @@ g.markdown_fenced_languages = {
 -- vim.g.adwaita_darker = true 
 g.adwaita_disable_cursorline = true
 vim.cmd([[
-colorscheme adwaita
+colorscheme onedark
 syntax on
 set noshowmode
 ]])
